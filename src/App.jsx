@@ -1,4 +1,4 @@
-import MainRouter from "../MainRouter";
+import MainRouter from "./components/MainRouter";
 import "./App.css";
 
 
