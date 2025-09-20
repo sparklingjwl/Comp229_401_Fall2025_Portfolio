@@ -23,8 +23,9 @@ a:hover {
 }
 
 body {
-  margin: auto;
-  width: 980px;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
 }
 
 h1 {
@@ -66,5 +67,5 @@ button:focus-visible {
 
 nav {
   float: right;
-  font-size: x-large;
+  font-size: xx-large;
 }
