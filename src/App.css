@@ -1,3 +1,24 @@
+/* Contact section card styling */
+.contact-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2.5rem 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Education section: College name emphasis */
+.college-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* Blue accent for highlighted text */
+.blue-paragraph {
+  color: #4fc3f7;
+}
+/* Section title underline effect */
 .section-title::after {
   content: '';
   position: absolute;
@@ -8,7 +29,8 @@
   left: 0;
   border-radius: 2px;
 }
-/* Shared section title style for pronounced headers */
+
+/* Section title main style */
 .section-title {
   text-align: center;
   color: #4a6baf;
@@ -19,12 +41,14 @@
   padding-bottom: 0.5rem;
 }
 
+/* Contact form button group */
 .form-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
+/* Contact form button style */
 form button {
   background: #4a6baf;
   color: white;
@@ -36,11 +60,13 @@ form button {
   width: 400px;
 }
 
+/* Contact form button hover effect */
 form button:hover {
   background: #35508a;
 }
-/* Hero section centering and styling */
 
+
+/* Hero section container */
  .hero {
   width: 100%;
   min-height: 60vh;
@@ -49,6 +75,7 @@ form button:hover {
   justify-content: center;
 }
 
+/* Hero section content card */
  .hero-content {
   text-align: center;
   background: rgba(30, 30, 30, 0.85);
@@ -58,6 +85,7 @@ form button:hover {
   max-width: 900px;
   width: 100%;
 }
+/* Main app container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -65,10 +93,12 @@ form button:hover {
   text-align: center;
 }
 
+/* Universal box-sizing */
 * {
   box-sizing: border-box;
 }
 
+/* Global body styles */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
@@ -86,18 +116,21 @@ body {
   justify-content: center;
 }
 
+/* Navigation bar list */
 nav ul {
   list-style: none;
   padding-top: 1.0rem;
   margin: 0;
 }
 
+/* Navigation bar list items */
 nav ul li {
   display: inline;
   align-items: center;
   margin: 0 1rem;
 }
 
+/* Navigation bar links */
 nav ul li a {
   color: #61dafb;
   text-decoration: none;
@@ -106,10 +139,12 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
+/* Navigation bar link hover */
 nav ul li a:hover {
   color: #21a1f1;
 }
 
+/* Contact section card (duplicate for responsive) */
 .contact-container {
   max-width: 900px;
   margin: 2rem auto;
@@ -119,6 +154,7 @@ nav ul li a:hover {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1); 
 }
 
+/* Contact section heading */
 .contact-container h2 {
   text-align: center;
   color: #21a1f1;
@@ -126,11 +162,13 @@ nav ul li a:hover {
   font-size: 2.2rem;
 }
 
+/* Contact section description */
 .contact-container > p {
   text-align: center;
   color: black;
 }
 
+/* Contact form layout */
 form {
   display: flex;
   flex-direction: column;
@@ -138,6 +176,7 @@ form {
   margin-bottom: 2rem;
 }
 
+/* Contact form label */
 label {
   display: flex;
   flex-direction: column;
@@ -151,13 +190,16 @@ label {
   transition: color 0.2s;
 }
 
+/* Label color on input/textarea focus */
 input:focus + label,
 textarea:focus + label {
   color: #21a1f1;
 }
 
+/* Contact form input and textarea */
 input, textarea {
   background-color: #102755;
+  color: white;
   padding: 0.8rem;
   border: 1px solid white;
   border-radius: 6px;
@@ -165,16 +207,19 @@ input, textarea {
   transition: border-color 0.3s ease;
 }
 
+/* Input/textarea focus border color */
 input:focus, textarea:focus {
   border-color: #21a1f1;
   outline: none;
 }
 
+/* Contact form textarea */
 textarea {
   resize: vertical;
   min-height: 120px;
 }
 
+/* Contact info card */
 .contact-info {
   background: white;
   padding: 1rem;
@@ -186,17 +231,20 @@ textarea {
   flex-wrap: wrap;
 }
 
+/* Contact info text */
 .contact-info p {
   margin: 0.5rem 0;
   color: black;
   white-space: nowrap;
 } 
 
+/* Contact info label */
 .contact-info p:first-child {
   font-weight: 500;
   color: #4a6baf;
 }
 
+/* Responsive: Contact section */
 @media (max-width: 768px) {
   .contact-container {
     padding: 1.5rem;
@@ -204,6 +252,7 @@ textarea {
   }
 }
 
+/* Education section container */
 .education-container {
  max-width: 900px;
  margin: 0 auto;
@@ -211,6 +260,7 @@ textarea {
  text-align: left;
 }
 
+/* Education section heading */
 .education-container h2 {
   text-align: center;
   color: #4a6baf;
@@ -221,6 +271,7 @@ textarea {
   padding-bottom: 0.5rem;
 }
 
+/* Education section heading underline */
 .education-container h2::after {
   content: '';
   position: absolute;
@@ -232,6 +283,7 @@ textarea {
   border-radius: 2px;
 }
 
+/* Education item card */
 .education-item {
   background: white;
   border-radius: 16px;
@@ -244,6 +296,7 @@ textarea {
   overflow: hidden;
 }
 
+/* Education item hover effect */
 .education-item::before {
   content: '';
   position: absolute;
@@ -255,15 +308,18 @@ textarea {
   transition: left 0.5s ease;
 }
 
+/* Education item hover animation */
 .education-item:hover::before {
   left: 100%;
 }
 
+/* Education item hover shadow */
 .education-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* Education item title */
 .education-item h3 {
   color: #2c3e50;
   margin-bottom: 1rem;
@@ -274,11 +330,13 @@ textarea {
   gap: 0.5rem;
 }
 
+/* Education item title icon */
 .education-item h3::before {
   content: '🎓';
   font-size: 1.2rem;   
 }
 
+/* Education item description */
 .education-item p {
   color: #2c3e50;
   margin: 0.8rem 0;
@@ -287,12 +345,14 @@ textarea {
   font-weight: 500;
 }
 
+/* Education item degree name */
 .education-item p:first-of-type {
   font-size: 1.15rem;
   color: #4a6baf;
   font-weight: 600;
 }
 
+/* Education item highlight */
 .education-item p:last-child {
   color: #075e97;
   font-weight: 600;
@@ -303,6 +363,7 @@ textarea {
   margin-top: 1rem;
 }
 
+/* Generic card style */
 .card {
   padding: 2em;
   background: white;
@@ -311,10 +372,12 @@ textarea {
   margin: 1rem 0;
 }
 
+/* Docs link style */
 .read-the-docs {
   color: #888;
 }
 
+/* Responsive: Main app and education section */
 @media (max-width: 768px) {
 #root {
   padding: 1rem;
@@ -339,6 +402,7 @@ textarea {
   }
 }
 
+/* Responsive: Education item for small screens */
 @media (max-width: 480px) {
   .education-item {
     padding: 1.2rem;
@@ -353,19 +417,23 @@ textarea {
 }
 }
 
+/* Logo image style */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+/* Logo hover effect */
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+/* React logo hover effect */
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Logo spin animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -375,6 +443,7 @@ textarea {
   }
 }
 
+/* Animation: Only for users who allow motion */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;

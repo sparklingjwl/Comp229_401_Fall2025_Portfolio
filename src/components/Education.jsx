@@ -9,7 +9,7 @@ export default function Education() {
 
                 {/* First education item: Centennial College */}
                 <div className="education-item">
-                    <h3>Centennial College</h3>
+                    <h3 className="college-name">Centennial College</h3>
                     {/* Degree or program */}
                     <p>Advanced Diploma in Software Engineering Technology</p>
                     {/* Years attended */}
@@ -24,7 +24,7 @@ export default function Education() {
 
                 {/* Second education item: Sault College */}
                 <div className="education-item">
-                    <h3>Sault College of Applied Arts and Technology</h3>
+                    <h3 className="college-name">Sault College of Applied Arts and Technology</h3>
                     {/* Degree or program */}
                     <p>Diploma in Practical Nursing</p>
                     {/* Years attended */}

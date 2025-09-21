@@ -12,11 +12,9 @@ export default function Home() {
                     <h2>Patient Care to Precise Code</h2>
                     <h3>Software Engineer | Analytical Precision | Problem Solver</h3>
                     {/* Brief summary paragraph */}
-                    <p>Junior Software Engineer leveraging a background in high-pressure healthcare to build precise,
-                        reliable, and user-focused software solutions. A collaborative team player with strong foundations
-                        in object-oriented programming (C#, Java) and full-stack web development (HTML, CSS, JavaScript, 
-                        React, Node.js). Seeking a remote co-op opportunity to contribute analytical and problem-solving 
-                        skills to build meaningful projects.</p>
+                    <p className="blue-paragraph">
+                        Junior Software Engineer leveraging a background in high-pressure healthcare to build precise, reliable, and user-focused software solutions. A collaborative team player with strong foundations in object-oriented programming (C#, Java) and full-stack web development (HTML, CSS, JavaScript, React, Node.js). Seeking a remote co-op opportunity to contribute analytical and problem-solving skills to build meaningful projects.
+                    </p>
                 </div>
             </section>
         </>
