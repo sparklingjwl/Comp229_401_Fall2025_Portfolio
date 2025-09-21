@@ -1,5 +1,8 @@
 // Projects component displays a list of portfolio projects
 import { FaGithub } from 'react-icons/fa';
+import WebHosting3 from '../assets/WebHosting3.png';
+import BookECommERD from '../assets/BookECommERD.png';
+import Slideshow from '../assets/Slideshow.png';
 export default function Projects() {
     return (
         <>
@@ -15,7 +18,7 @@ export default function Projects() {
                             {/* Web Hosting image */}
                             <div className="project-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
-                                    src="/src/assets/WebHosting3.png" 
+                                    src={WebHosting3}
                                     alt="Web Hosting Canada Website Design screenshot" 
                                     style={{ width: '100%', maxWidth: '320px', height: '180px', objectFit: 'cover', borderRadius: '8px', border: '1px solid #ccc' }}
                                 />
@@ -40,7 +43,7 @@ export default function Projects() {
                             {/* ERD image */}
                             <div className="project-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
-                                    src="/src/assets/BookECommERD.png" 
+                                    src={BookECommERD}
                                     alt="ERD diagram for Bookstore E-Commerce Solution" 
                                     style={{ width: '100%', maxWidth: '320px', height: '180px', objectFit: 'cover', borderRadius: '8px', border: '1px solid #ccc' }}
                                 />             
@@ -66,10 +69,10 @@ export default function Projects() {
                             {/* Photo gallery image */}
                             <div className="project-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
-                                    src="/src/assets/Slideshow.png" 
+                                    src={Slideshow}
                                     alt="Interactive Slideshow Web Application screenshot" 
                                     style={{ width: '100%', maxWidth: '320px', height: '180px', objectFit: 'cover', borderRadius: '8px', border: '1px solid #ccc' }}
-                                />                               
+                                />
                             </div>
                             <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
                                 <a href="https://github.com/sparklingjwl/InteractiveSlideshow_Web_Winter2025" target="_blank" rel="noopener noreferrer" style={{ color: '#4fc3f7', textDecoration: 'underline', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>

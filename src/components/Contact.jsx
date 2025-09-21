@@ -11,8 +11,7 @@ export default function Contact() {
 
     // Handles form submission: prevents default, then navigates to home page
     function handleSubmit(e) {
-        e.preventDefault(); // Prevents page reload on submit (works for Enter and Send button)
-        // TODO: Add your form processing logic here (e.g., send data to server)
+        e.preventDefault(); // Prevents page reload on submit
         navigate("/"); // Redirects to home page after form submission
     }
 

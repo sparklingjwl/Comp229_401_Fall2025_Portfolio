@@ -1,4 +1,7 @@
 // Services component displays the services you offer or skills you provide
+import UX from '../assets/UX.jpg';
+import ColourKeyboard from '../assets/ColourKeyboard.jpg';
+import Agility from '../assets/Agility.png';
 const Services = () => {
     return (
         <>
@@ -14,7 +17,7 @@ const Services = () => {
                             {/* Service image */}
                             <div className="service-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
-                                    src="/src/assets/UX.jpg" 
+                                    src={UX}
                                     alt="Letters UX" 
                                     style={{ width: '100%', maxWidth: '120px', height: '80px', objectFit: 'cover', borderRadius: '8px', border: '1px solid #ccc' }}
                                 />                                
@@ -31,7 +34,7 @@ const Services = () => {
                             {/* Service image */}
                             <div className="service-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
-                                    src="/src/assets/ColourKeyboard.jpg" 
+                                    src={ColourKeyboard}
                                     alt="Multi-coloured keyboard" 
                                     style={{ width: '100%', maxWidth: '120px', height: '80px', objectFit: 'cover', borderRadius: '8px', border: '1px solid #ccc' }}
                                 />                                
@@ -48,10 +51,10 @@ const Services = () => {
                             {/* Service image */}
                             <div className="service-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
-                                    src="/src/assets/Agility.png" 
+                                    src={Agility}
                                     alt="Agility on paper" 
                                     style={{ width: '100%', maxWidth: '120px', height: '80px', objectFit: 'cover', borderRadius: '8px', border: '1px solid #ccc' }}
-                                />                                
+                                />
                             </div>
                             <h3 style={{ color: '#357ae8', fontWeight: 800, textShadow: '0 2px 8px rgba(53,122,232,0.10)' }}>Software Lifecycle Collaboration</h3>
                             <p className="blue-paragraph">

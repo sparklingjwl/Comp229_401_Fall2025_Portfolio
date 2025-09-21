@@ -1,4 +1,6 @@
 // About component displays a personal introduction and background
+import Kelly1 from '../assets/Kelly1.jpg';
+
 export default function About() {
     return (
         <>
@@ -8,7 +10,7 @@ export default function About() {
                     {/* Portrait-style profile photo section */}
                     <div className="profile-photo" style={{ textAlign: 'center', marginBottom: '2rem' }}>
                         <img 
-                            src="/src/assets/Kelly1.jpg" 
+                            src={Kelly1}
                             alt="Kelly Burden" 
                             style={{ width: '200px', height: '300px', objectFit: 'cover', borderRadius: '12px', border: '2px solid #ccc', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
                         />
