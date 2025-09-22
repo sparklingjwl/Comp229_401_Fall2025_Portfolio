@@ -9,10 +9,11 @@ export default function Projects() {
             {/* Hero section for Projects page */}
             <section className="hero">
                 <div className="hero-content">
-                    {/* Section title with underline */}
-                    <h2 className="section-title">My Projects</h2>
-                    {/* Project cards grid */}
-                    <div className="project-grid">
+                    <div className="project-card">
+                        {/* Section title with underline */}
+                        <h2 className="section-title">My Projects</h2>
+                        {/* Project cards grid */}
+                        <div className="project-grid">
                         {/* Project 1 */}
                         <div className="project-card">
                             {/* Web Hosting image */}
@@ -24,20 +25,21 @@ export default function Projects() {
                                 />
                                 </div>
                             <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
-                                <a href="https://github.com/sparklingjwl/web-hosting-interface-design-2024" target="_blank" rel="noopener noreferrer" style={{ color: '#4fc3f7', textDecoration: 'underline', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                                    <FaGithub style={{ verticalAlign: 'middle' }} /> View on GitHub
+                                <a href="https://github.com/sparklingjwl/web-hosting-interface-design-2024" target="_blank" rel="noopener noreferrer" className="github-link">
+                                    <FaGithub className="github-icon" /> View on GitHub
                                 </a>
                             </div>
-                            <h3 style={{ color: '#357ae8', fontWeight: 800, textShadow: '0 2px 8px rgba(53,122,232,0.10)' }}>Web Hosting Canada Website Design</h3>
+                            <h3 className="project-title">Web Hosting Canada Website Design</h3>
                             <p className="blue-paragraph">
-                                This was an individual project focused on designing a fully responsive, front-end redesign of the <br />
-                                Web Hosting Canada website. Developed using HTML and CSS, this project features a modern<br />
-                                multi-page layout with a dynamic homepage, a pricing plans section, and functional user <br />
-                                authentication forms (login & registration). Focused on clean design, intuitive navigation, <br />
-                                and a compelling user experience. Concepts included are responsive design, UI/UX, form <br />
+                                This was an individual project focused on designing a fully responsive, front-end redesign of the
+                                Web Hosting Canada website. Developed using HTML and CSS, this project features a modern
+                                multi-page layout with a dynamic homepage, a pricing plans section, and functional user
+                                authentication forms (login & registration). Focused on clean design, intuitive navigation,
+                                and a compelling user experience. Concepts included are responsive design, UI/UX, form
                                 validation, and semantic HTML.
                             </p>
                         </div>
+                        <div className="edu-divider"></div>
                         {/* Project 2 */}
                         <div className="project-card">
                             {/* ERD image */}
@@ -49,21 +51,22 @@ export default function Projects() {
                                 />             
                             </div>
                             <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
-                                <a href="https://github.com/sparklingjwl/Bookstore-E-Commerce-Solution-Database-Group-Project" target="_blank" rel="noopener noreferrer" style={{ color: '#4fc3f7', textDecoration: 'underline', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                                    <FaGithub style={{ verticalAlign: 'middle' }} /> View on GitHub
+                                <a href="https://github.com/sparklingjwl/Bookstore-E-Commerce-Solution-Database-Group-Project" target="_blank" rel="noopener noreferrer" className="github-link">
+                                    <FaGithub className="github-icon" /> View on GitHub
                                 </a>
                             </div>
-                            <h3 style={{ color: '#357ae8', fontWeight: 800, textShadow: '0 2px 8px rgba(53,122,232,0.10)' }}>Bookstore E-Commerce Solution</h3>
+                            <h3 className="project-title">Bookstore E-Commerce Solution</h3>
                             <p className="blue-paragraph">
-                                This project involved the collaborative design and development of a fully-functional,<br />
-                                relational database to power a bookstore's e-commerce platform. Following the Systems <br />
-                                Development Life Cycle (SDLC), our team transformed business requirements into a <br />
-                                robust SQL database schema. The system efficiently manages products, categories, <br />
-                                customers, shopping carts, and order fulfillment with complex relationships and<br />
-                                constraints. I contributed through all phases of the project. The project was built<br />
+                                This project involved the collaborative design and development of a fully-functional,
+                                relational database to power a bookstore's e-commerce platform. Following the Systems
+                                Development Life Cycle (SDLC), our team transformed business requirements into a
+                                robust SQL database schema. The system efficiently manages products, categories,
+                                customers, shopping carts, and order fulfillment with complex relationships and
+                                constraints. I contributed through all phases of the project. The project was built
                                 using Oracle SQL Developer, Visual Studio Code, ERD Modeling.
                             </p>
                         </div>
+                        <div className="edu-divider"></div>
                         {/* Project 3 */}
                         <div className="project-card">
                             {/* Photo gallery image */}
@@ -75,18 +78,19 @@ export default function Projects() {
                                 />
                             </div>
                             <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
-                                <a href="https://github.com/sparklingjwl/InteractiveSlideshow_Web_Winter2025" target="_blank" rel="noopener noreferrer" style={{ color: '#4fc3f7', textDecoration: 'underline', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                                    <FaGithub style={{ verticalAlign: 'middle' }} /> View on GitHub
+                                <a href="https://github.com/sparklingjwl/InteractiveSlideshow_Web_Winter2025" target="_blank" rel="noopener noreferrer" className="github-link">
+                                    <FaGithub className="github-icon" /> View on GitHub
                                 </a>
                             </div>
-                            <h3 style={{ color: '#357ae8', fontWeight: 800, textShadow: '0 2px 8px rgba(53,122,232,0.10)' }}>Interactive Slideshow Web Application</h3>
+                            <h3 className="project-title">Interactive Slideshow Web Application</h3>
                             <p className="blue-paragraph">
-                                Designed and built an interactive slideshow/photo gallery from scratch using JavaScript,<br />
-                                HTML, and CSS3. The application features a main gallery, a zoom modal, and a dynamic<br />
-                                favorites system that allows users to add and remove images via intuitive DOM <br />
-                                manipulation, all without page reloads. The concepts used were DOM API, event handling, <br />
+                                Designed and built an interactive slideshow/photo gallery from scratch using JavaScript,
+                                HTML, and CSS3. The application features a main gallery, a zoom modal, and a dynamic
+                                favorites system that allows users to add and remove images via intuitive DOM
+                                manipulation, all without page reloads. The concepts used were DOM API, event handling,
                                 event delegation, and UI/UX design.
                             </p>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -8,12 +8,13 @@ const Services = () => {
             {/* Hero section for Services page */}
             <section className="hero">
                 <div className="hero-content">
-                    {/* Section title with underline */}
-                    <h2 className="section-title">My Services</h2>
-                    {/* Service cards grid */}
-                    <div className="service-grid">
+                    <div className="project-card">
+                        {/* Section title with underline */}
+                        <h2 className="section-title">My Services</h2>
+                        {/* Service cards grid */}
+                        <div className="project-grid">
                         {/* Service 1 */}
-                        <div className="service-item">
+                        <div className="project-card">
                             {/* Service image */}
                             <div className="service-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
@@ -29,8 +30,9 @@ const Services = () => {
                                 Experienced with database technologies: MongoDB, SQL.
                             </p>
                         </div>
+                        <div className="edu-divider"></div>
                         {/* Service 2 */}
-                        <div className="service-item">
+                        <div className="project-card">
                             {/* Service image */}
                             <div className="service-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
@@ -46,8 +48,9 @@ const Services = () => {
                                 Meeting project requirements through best practices.
                             </p>
                         </div>
+                        <div className="edu-divider"></div>
                         {/* Service 3 */}
-                        <div className="service-item">
+                        <div className="project-card">
                             {/* Service image */}
                             <div className="service-image" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                                 <img 
@@ -62,6 +65,7 @@ const Services = () => {
                                 Creating precise documentation for development.<br />
                                 Project tracking with tools like Git and Jira.
                             </p>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -60,8 +60,8 @@ export default function Contact() {
                         {/* Contact info section with email and social links */}
                         <div className= "contact-info">
                             {/* Email link */}
-                            <p>
-                                Email: <a href="mailto:kburden4@my.centennialcollege.ca">kburden4@my.centennialcollege.ca</a>
+                            <p className="contact-info-email">
+                                <span className="contact-label">Email:</span> <a href="mailto:kburden4@my.centennialcollege.ca">kburden4@my.centennialcollege.ca</a>
                             </p>
                             {/* LinkedIn link with icon */}
                             <p>
