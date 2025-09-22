@@ -8,7 +8,7 @@ export default function Projects() {
         <>
             {/* Hero section for Projects page */}
             <section className="hero">
-                <div className="hero-content">
+                <div className="hero-content projects-page">
                     <div className="project-card">
                         {/* Section title with underline */}
                         <h2 className="section-title">My Projects</h2>

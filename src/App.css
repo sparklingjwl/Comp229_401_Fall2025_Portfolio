@@ -1,3 +1,14 @@
+/* Left-align only paragraphs in Projects page */
+.projects-page .blue-paragraph {
+  text-align: left;
+}
+/* Override browser autofill background and text color for consistency */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px whitesmoke inset !important;
+  -webkit-text-fill-color: black !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
 /* Diploma and date style for Education section */
 .edu-diploma-date {
   color: #357ae8;
@@ -169,7 +180,7 @@ form button:hover {
 }
 
 /* Hero section content card */
- .hero-content {
+.hero-content {
   text-align: center;
   background: rgba(30, 30, 30, 0.85);
   padding: 2rem 3rem;
@@ -285,9 +296,9 @@ label {
   transition: color 0.2s;
 }
 
-/* Label color on input/textarea focus */
-input:focus + label,
-textarea:focus + label {
+
+/* Label color when input/textarea inside is focused */
+label:focus-within {
   color: #21a1f1;
 }
 
@@ -296,16 +307,23 @@ input, textarea {
   background-color: whitesmoke;
   color: black;
   padding: 0.8rem;
-  border: 1px solid white;
+  border: 1px solid #e0e0e0;
   border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
-/* Input/textarea focus border color */
+/* Input/textarea focus border and background color */
 input:focus, textarea:focus {
   border-color: #21a1f1;
+  background-color: #e3f2fd;
   outline: none;
+}
+
+/* Ensure textarea focus color always applies */
+textarea:focus {
+  border-color: #21a1f1 !important;
+  background-color: #e3f2fd !important;
 }
 
 /* Contact form textarea */
