@@ -40,7 +40,7 @@ export default function Contact() {
                             <label>
                                 Contact Number:
                                 <input type="tel" name="contactNumber" />
-                            </label>
+                            </label> {/* Optional: No required field */}
                             {/* Email input */}
                             <label>
                                 Email:
@@ -50,7 +50,7 @@ export default function Contact() {
                             <label>
                                 Message:
                                 <textarea name="message"></textarea>
-                            </label>
+                            </label> {/* Optional: No required field */}
                             {/* Form buttons: Send and Reset */}
                             <div className="form-buttons">
                                 <button type="submit">Send</button>
