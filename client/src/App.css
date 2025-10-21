@@ -1,0 +1,375 @@
+/* Left-align only paragraphs in Projects page */
+.projects-page .blue-paragraph {
+  text-align: left;
+}
+/* Override browser autofill background and text color for consistency */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px whitesmoke inset !important;
+  -webkit-text-fill-color: black !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+/* Diploma and date style for Education section */
+.edu-diploma-date {
+  color: #357ae8;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(53,122,232,0.10);
+}
+/* College name style for Education section */
+.college-name {
+  color: #61dafb;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.project-title {
+  color: #357ae8;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(53,122,232,0.10);
+}
+.home-detail {
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-left {
+  text-align: left;
+}
+.contact-info-email .contact-label {
+  color: #21a1f1;
+  font-weight: 700;
+}
+
+.github-icon, .linkedin-icon {
+  color: #21a1f1;
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+.github-link, .linkedin-link {
+  color: #21a1f1;
+  text-decoration: underline;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.github-link:hover, .linkedin-link:hover {
+  color: #4fc3f7;
+}
+.edu-divider {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4a6baf, #61dafb);
+  border-radius: 2px;
+  margin: 2.5rem 0 2.5rem 0;
+}
+
+.gpa-highlight {
+  color: #61dafb;
+  font-weight: 700;
+}
+.edu-detail {
+  text-align: left;
+  color: #4fc3f7;
+}
+.edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.edu-row p,
+.edu-row span {
+  margin: 0;
+}
+.edu-row span {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.edu-card {
+  padding: 2em;
+  background: #121212;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  border: 2.5px solid #4a6baf;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.edu-card h3 {
+  color: #357ae8;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  text-shadow: 0 2px 8px rgba(53,122,232,0.10);
+}
+.edu-card p {
+  font-size: 1.08rem;
+  margin: 0.4rem 0;
+}
+/* Contact section card styling */
+.contact-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2.5rem 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Blue accent for highlighted text */
+.blue-paragraph {
+  color: #4fc3f7;
+}
+
+/* Section title underline effect */
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4a6baf, #61dafb);
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* Section title main style */
+.section-title {
+  text-align: center;
+  color: #21a1f1;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* Contact form button group */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+/* Contact form button style */
+form button {
+  background: #4fc3f7;
+  color: white;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 400px;
+}
+
+/* Contact form button hover effect */
+form button:hover {
+  background: #35508a;
+}
+
+/* Hero section container */
+ .hero {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero section content card */
+.hero-content {
+  text-align: center;
+  background: rgba(30, 30, 30, 0.85);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  max-width: 900px;
+  width: 100%;
+}
+/* Main app container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Universal box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Global body styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  line-height: 1.6;
+  background-color: #121212;
+  background-image: repeating-linear-gradient(135deg, #181818 0px, #181818 8px, #121212 8px, #121212 16px);
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation bar list */
+nav ul {
+  list-style: none;
+  padding-top: 1.0rem;
+  margin: 0;
+}
+
+/* Navigation bar list items */
+nav ul li {
+  display: inline;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+/* Navigation bar links */
+nav ul li a {
+  color: #61dafb;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Navigation bar link hover */
+nav ul li a:hover {
+  color: #21a1f1;
+}
+
+/* Contact section card */
+.contact-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: black;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1); 
+}
+
+/* Contact section heading */
+.contact-container h2 {
+  text-align: left;
+  color: #21a1f1;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+/* Contact section description */
+.contact-container > p {
+  text-align: center;
+  color: black;
+}
+
+/* Contact form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Contact form label */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #21a1f1; /* Updated for better visibility */
+  text-align: left;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 1px 2px rgba(33,161,241,0.08);
+  transition: color 0.2s;
+}
+
+
+/* Label color when input/textarea inside is focused */
+label:focus-within {
+  color: #21a1f1;
+}
+
+/* Contact form input and textarea */
+input, textarea {
+  background-color: whitesmoke;
+  color: black;
+  padding: 0.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Input/textarea focus border and background color */
+input:focus, textarea:focus {
+  border-color: #21a1f1;
+  background-color: #e3f2fd;
+  outline: none;
+}
+
+/* Ensure textarea focus color always applies */
+textarea:focus {
+  border-color: #21a1f1 !important;
+  background-color: #e3f2fd !important;
+}
+
+/* Contact form textarea */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Contact info card */
+.contact-info {
+  background: black;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Contact info text */
+.contact-info p {
+  margin: 0.5rem 0;
+  color: black;
+  white-space: nowrap;
+} 
+
+/* Contact info label */
+.contact-info p:first-child {
+  font-weight: 500;
+  color: #4a6baf;
+}
+
+/* Responsive: Contact section */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+/* Generic card style */
+.project-card {
+  padding: 2em;
+  background: #121212;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+}
