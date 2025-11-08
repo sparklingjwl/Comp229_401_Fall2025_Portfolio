@@ -5,20 +5,25 @@ import mongoose from 'mongoose';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Import models
+// Portfolio Backend Server - Express API for full-stack portfolio application
+// Provides RESTful APIs for portfolio data and authentication
+// Connects React frontend with MongoDB database
+// Supports JWT authentication and admin authorization
+
+// Import MongoDB models
 import Contact from './models/Contact.js';
 import Project from './models/Project.js';
 import Education from './models/Education.js';
 import User from './models/User.js';
 
-// Import routes
+// Import API route handlers
 import contactRoutes from './routes/contactRoutes.js';
 import projectRoutes from './routes/projectRoutes.js';
 import educationRoutes from './routes/educationRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 
-// Middleware
+// Import authentication middleware
 import { authenticateToken } from './middleware/auth.js';
 
 // Get current file path for ES modules
@@ -42,17 +47,17 @@ mongoose.connect(process.env.MONGODB_URI)
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
-app.use(express.json());
+app.use(cors()); // Enable Cross-Origin Resource Sharing
+app.use(express.json()); // Parse JSON request bodies
 
-// Routes
+// API Routes
 app.use('/api/contacts', contactRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/qualifications', educationRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 
-// Basic route to test the server
+// Basic route to verify server and database status
 app.get('/', (req, res) => {
   const dbStatus = mongoose.connection.readyState === 1 ? 'Connected to MongoDB' : 'Disconnected from MongoDB';
   
@@ -68,7 +73,7 @@ app.get('/', (req, res) => {
   });
 });
 
-// Test route to verify models are working
+// Test route: verifies all models are loaded correctly
 app.get('/test-models', async (req, res) => {
   try {
     res.json({
@@ -89,7 +94,7 @@ app.get('/test-models', async (req, res) => {
   }
 });
 
-// Protected route example - requires valid JWT token
+// Protected route example - demonstrates JWT authentication
 app.get('/api/protected', authenticateToken, (req, res) => {
   res.json({ 
     message: `This is a protected route`,
@@ -98,7 +103,7 @@ app.get('/api/protected', authenticateToken, (req, res) => {
   });
 });
 
-// Start server
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(`Test at: http://localhost:${PORT}/`);

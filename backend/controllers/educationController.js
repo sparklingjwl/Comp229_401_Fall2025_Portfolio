@@ -1,6 +1,9 @@
 import Education from '../models/Education.js';
+// Education controller - Handles all education-related CRUD operations
+// Public: GET routes (portfolio visitors can view education entries)
+// Admin only: POST, PUT, DELETE routes (protected by admin middleware)
 
-// Get all education
+// Get all education entries (Public - displays on portfolio)
 export const getEducation = async (req, res) => {
     try {
         const education = await Education.find();
@@ -23,7 +26,7 @@ export const getEducationById = async (req, res) => {
     }
 };
 
-// Create new education
+// Create new education entry (Admin only - add new qualifications)
 export const createEducation = async (req, res) => {
     try {
         const newEducation = new Education(req.body);
@@ -60,7 +63,7 @@ export const deleteEducation = async (req, res) => {
     }
 };
 
-// Delete all education records
+// Delete all education records (Admin only)
 export const deleteAllEducation = async (req, res) => {
     try {
         await Education.deleteMany({});

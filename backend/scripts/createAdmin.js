@@ -4,19 +4,23 @@ import User from './models/User.js';
 
 dotenv.config();
 
+// admin User Creation Script
+// Creates a hardcoded admin user for the portfolio application
+// Run with: npm run create-admin (from backend folder)
+
 const createAdminUser = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to MongoDB');
 
-    // Check if admin already exists
+    // Check if admin already exists to prevent duplicates
     const existingAdmin = await User.findOne({ email: 'admin@portfolio.com' });
     if (existingAdmin) {
       console.log('Admin user already exists');
       return;
     }
 
-    // Create admin user
+    // Create admin user - password will be hashed by User model
     const adminUser = new User({
       name: 'Portfolio Admin',
       email: 'admin@portfolio.com',

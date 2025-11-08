@@ -1,5 +1,6 @@
 // Education component displays academic background
 export default function Education() {
+    // Retrieve user information from local storage
     const user = JSON.parse(localStorage.getItem('user'));
     return (
         <>
@@ -9,6 +10,8 @@ export default function Education() {
                     <div className="project-card">
                         {/* Section title with underline */}
                         <h2 className="section-title">My Education</h2>
+
+                        {/* Conditional rendering of admin controls based on user role */}
                         {user && user.role === 'admin' && (
                         <div className="admin-controls">
                             <button>Add New Education</button>

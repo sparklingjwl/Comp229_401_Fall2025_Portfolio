@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "./assets/Coffee1.jpg";
 
 export default function Layout({ children }) {
+  // Retrieve user information from local storage
   const user = JSON.parse(localStorage.getItem('user'));
   return (
     <>
@@ -14,9 +15,9 @@ export default function Layout({ children }) {
               <li><Link to="/education">Education</Link></li>
               <li><Link to="/contact">Contact</Link></li>
              </ul> 
-
+             {/* User navigation area */} 
              <div className="user-nav-area">
-              {user ? (
+              {user ? ( // Logged-in user info and logout button
                 <div className="user-info">
                   <span>Welcome, {user.name} ({user.role})</span>
                   <button className="logout-btn" onClick={() => {

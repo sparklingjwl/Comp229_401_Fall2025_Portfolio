@@ -5,6 +5,7 @@ import BookECommERD from '../assets/BookECommERD.png';
 import Slideshow from '../assets/Slideshow.png';
 
 export default function Projects() {
+    // Retrieve user information from local storage
     const user = JSON.parse(localStorage.getItem('user'));
     return (
         <>
@@ -14,6 +15,7 @@ export default function Projects() {
                     <div className="project-card">
                         {/* Section title with underline */}
                         <h2 className="section-title">My Projects</h2>
+                        {/* Conditional rendering of admin controls based on user role */}
                         {user && user.role === 'admin' && (
                         <div className="admin-controls">
                             <button>Add New Project</button>

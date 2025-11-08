@@ -1,12 +1,12 @@
 import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 
-// Register new user
+// Register new user (Admin only to prevent unauthorized admin creation)
 export const register = async (req, res) => {
     try {
         const { name, email, password, role } = req.body;
 
-        // Prevent non-admin users from creating admin accounts
+        // Security check: only admins can create admin accounts
         if (role === 'admin' && req.user.role !== 'admin') {
             return res.status(403).json({ message: 'Only admins can create admin accounts' });
         }   
@@ -22,7 +22,7 @@ export const register = async (req, res) => {
         if (req.user.role === "admin" && role) {
             userData.role = role;
         }
-
+        // Save user to database
         const user = new User(userData);
         await user.save();
 
@@ -33,6 +33,7 @@ export const register = async (req, res) => {
             {expiresIn: '24h'}
         );
 
+        // Send response
         res.status(201).json({
             message: 'User registered successfully',
             token,
@@ -52,7 +53,7 @@ export const register = async (req, res) => {
     }
 };
 
-// Login user
+// Login user (Public route - validates credentials and returns JWT)
 export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -69,9 +70,9 @@ export const login = async (req, res) => {
             return res.status(400).json({ message: 'Invalid email or password' });
         }
 
-        // Generate JWT token
+        // Generate JWT token with user rold for authorization
         const token = jwt.sign(
-            { userId: user._id, email: user.email }, 
+            { userId: user._id, email: user.email, role: user.role }, 
             process.env.JWT_SECRET, 
             { expiresIn: '24h' }
         );
@@ -110,7 +111,7 @@ export const getProfile = async (req, res) => {
     }
 };
 
-// Get all users (admin only)
+// Get all users (Admin only - returns users without passwords)
 export const getAllUsers = async (req, res) => {
     try {
         const users = await User.find().select('-password'); // Exclude passwords

@@ -1,6 +1,9 @@
 import User from '../models/User.js';
+// User controller - Handles all user-related CRUD operations
+// Admin only: GET, POST, PUT, DELETE routes (protected by admin middleware)
+// Security: Always exclude passwords from responses
 
-// Get users (admin only)
+// Get users (admin only - excludes passwords for security)
 export const getUsers = async (req, res) => {
     try {
         const users = await User.find().select('-password');
@@ -13,7 +16,7 @@ export const getUsers = async (req, res) => {
 // Get single user by ID
 export const getUserById = async (req, res) => {
     try {
-        const user = await User.findById(req.params.id);
+        const user = await User.findById(req.params.id).select('-password');
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
@@ -60,7 +63,7 @@ export const deleteUser = async (req, res) => {
     }
 };
 
-// Delete all users
+// Delete all users (Admin only)
 export const deleteAllUsers = async (req, res) => {
     try {
         await User.deleteMany({});

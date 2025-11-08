@@ -2,12 +2,14 @@
 import Kelly1 from '../assets/Kelly1.jpg';
 
 export default function About() {
+    // Retrieve user information from local storage
     const user = JSON.parse(localStorage.getItem('user'));
     return (
         <>
             {/* Hero section for About page */}
             <section className="hero">
                 <div className="hero-content">
+                    {/* Conditional rendering of admin controls based on user role */}
                     {user && user.role === 'admin' && (
                         <div className="admin-controls">
                             <button>Change Profile Photo</button>   

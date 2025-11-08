@@ -17,11 +17,14 @@ export default function Contact() {
         email: '',
         message: ''
     });
-    const [loading, setLoading] = useState(false);
+    // State variables for loading status and feedback message
+    const [loading, setLoading] = useState(false);    
     const [message, setMessage] = useState('');
 
+    // Retrieve user information from local storage
     const user = JSON.parse(localStorage.getItem('user'));
 
+    // Handles changes to form input fields
     const handleChange = (e) => {
         setFormData({
             ...formData, 
@@ -36,7 +39,7 @@ export default function Contact() {
         setLoading(true);
         setMessage('');
 
-        try {
+        try { // Call the contactService to create a new contact message
             console.log('Calling contactService.create');
             const result = await contactService.create(formData);
             console.log('API Success Response:', result);

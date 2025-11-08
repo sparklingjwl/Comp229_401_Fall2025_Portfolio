@@ -1,6 +1,9 @@
 import Contact from '../models/Contact.js';
+// Contact controller - Handles all contact-related CRUD operations
+// Public: GET routes for retrieving contacts
+// Admin only: PUT, DELETE routes (protected by admin middleware)
 
-// Get all contacts
+// Get all contacts (Public route - for admin viewing)
 export const getContacts = async (req, res) => {
     try {
         const contacts = await Contact.find();
@@ -21,7 +24,7 @@ export const getContactById = async (req, res) => {
     }
 };
 
-// Create new contact
+// Create new contact (Public route - contact form submission)
 export const createContact = async (req, res) => {
     try {
         const contact = new Contact(req.body);
@@ -54,7 +57,7 @@ export const deleteContact = async (req, res) => {
     }
 };
 
-// Delete all contacts
+// Delete all contacts (Admin only)
 export const deleteAllContacts = async (req, res) => {
     try {
         await Contact.deleteMany({});

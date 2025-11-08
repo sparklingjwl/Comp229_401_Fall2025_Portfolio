@@ -3,6 +3,7 @@ import UX from '../assets/UX.jpg';
 import ColourKeyboard from '../assets/ColourKeyboard.jpg';
 import Agility from '../assets/Agility.png';
 const Services = () => {
+    // Retrieve user information from local storage
     const user = JSON.parse(localStorage.getItem('user'));
     return (
         <>
@@ -12,6 +13,7 @@ const Services = () => {
                     <div className="project-card">
                         {/* Section title with underline */}
                         <h2 className="section-title">My Services</h2>
+                        {/* Conditional rendering of admin controls based on user role */}
                         {user && user.role === 'admin' && (
                         <div className="admin-controls">
                             <button>Add New Service</button>

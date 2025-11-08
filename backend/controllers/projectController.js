@@ -1,10 +1,13 @@
 import Project from '../models/Project.js';
+// Project controller - Handles all project-related CRUD operations
+// Public: GET routes for retrieving projects
+// Admin only: POST, PUT, DELETE routes (protected by admin middleware)
 
-// Get all projects
+// Get all projects (Public route - displays portfolio projects)
 export const getProjects = async (req, res) => {
     try {
-        const project = await Project.find();
-        res.json(project);
+        const projects = await Project.find();
+        res.json(projects);
     } catch (error) {
         res.status(500).json({ message: 'Server Error', error });
     }
@@ -23,7 +26,7 @@ export const getProjectById = async (req, res) => {
     }
 };
 
-// Create new project
+// Create new project (Admin only - add new portfolio project)
 export const createProject = async (req, res) => {
     try {
         const newProject = new Project(req.body);
@@ -60,7 +63,7 @@ export const deleteProject = async (req, res) => {
     }
 };
 
-// Delete all projects
+// Delete all projects (Admin only)
 export const deleteAllProjects = async (req, res) => {
     try {
         await Project.deleteMany({});

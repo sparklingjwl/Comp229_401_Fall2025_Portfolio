@@ -1,5 +1,6 @@
 // Home component displays the main landing section of the portfolio
 export default function Home() {
+    // Retrieve user information from local storage
     const user = JSON.parse(localStorage.getItem('user'));
     return (
         <>
@@ -9,6 +10,7 @@ export default function Home() {
                     <div className="project-card">
                         {/* Section title with underline */}
                         <h2 className="section-title">Home</h2>
+                        {/* Conditional rendering of admin controls based on user role */}
                         {user && user.role === 'admin' && (
                         <div className="admin-controls">
                             <button>Edit Home Section</button>
