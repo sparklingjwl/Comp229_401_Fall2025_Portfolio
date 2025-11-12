@@ -13,7 +13,7 @@
     "dev:backend": "npm run dev --workspace=backend",
     "build": "npm run build --workspace=frontend",
     "start": "npm run start --workspace=backend",
-    "create-admin": "npm run create-admin --workspace=backend",
+    "create-admin": "node backend/scripts/createAdmin.js",
     "install:all": "npm install",
     "lint": "npm run lint --workspace=frontend",
     "preview": "npm run preview --workspace=frontend"

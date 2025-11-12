@@ -1,15 +1,25 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import User from './models/User.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-dotenv.config();
+// Resolves file paths correctly in ES modules
+const _filename = fileURLToPath(import.meta.url);
+const _dirname = path.dirname(_filename);
 
-// admin User Creation Script
+// Load environment variables from backend/.env
+dotenv.config({path: path.join(_dirname, '../.env')});
+
+// Import User model
+import User from '../models/User.js';
+
+// Admin User Creation Script
 // Creates a hardcoded admin user for the portfolio application
 // Run with: npm run create-admin (from backend folder)
 
 const createAdminUser = async () => {
   try {
+    console.log('Connecting to MongoDB...');
     await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to MongoDB');
 

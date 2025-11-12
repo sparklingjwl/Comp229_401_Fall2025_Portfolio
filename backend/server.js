@@ -2,8 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 // Portfolio Backend Server - Express API for full-stack portfolio application
 // Provides RESTful APIs for portfolio data and authentication
@@ -16,15 +14,18 @@ import Project from './models/Project.js';
 import Education from './models/Education.js';
 import User from './models/User.js';
 
+// Import authentication middleware
+import { authenticateToken } from './middleware/auth.js';
+
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 // Import API route handlers
 import contactRoutes from './routes/contactRoutes.js';
 import projectRoutes from './routes/projectRoutes.js';
 import educationRoutes from './routes/educationRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import authRoutes from './routes/authRoutes.js';
-
-// Import authentication middleware
-import { authenticateToken } from './middleware/auth.js';
 
 // Get current file path for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -50,6 +51,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors()); // Enable Cross-Origin Resource Sharing
 app.use(express.json()); // Parse JSON request bodies
 
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
 // API Routes
 app.use('/api/contacts', contactRoutes);
 app.use('/api/projects', projectRoutes);
@@ -58,7 +62,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 
 // Basic route to verify server and database status
-app.get('/', (req, res) => {
+app.get('/api/status', (req, res) => {
   const dbStatus = mongoose.connection.readyState === 1 ? 'Connected to MongoDB' : 'Disconnected from MongoDB';
   
   res.json({
@@ -100,6 +104,16 @@ app.get('/api/protected', authenticateToken, (req, res) => {
     message: `This is a protected route`,
     user: req.user,
     timestamp: new Date().toISOString()
+  });
+});
+
+// Catch-all route to serve React frontend for any unmatched routes
+app.use((req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'), (err) => {
+    if (err) {
+      console.error('Error sending index.html:', err);
+      res.status(500).send('Error loading application');
+    }
   });
 });
 
