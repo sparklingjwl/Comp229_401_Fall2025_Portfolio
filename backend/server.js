@@ -117,8 +117,8 @@ app.use((req, res) => {
   });
 });
 
-// Start the server
-app.listen(PORT, () => {
+// Start the server - listen on all network interfaces
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(`Test at: http://localhost:${PORT}/`);
 });
