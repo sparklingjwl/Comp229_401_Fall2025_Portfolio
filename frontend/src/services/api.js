@@ -1,8 +1,8 @@
 // API service - Controlled service for all backend API calls
 // Handles authentication, headers, and error hadling consistently
-// Base URL: http://localhost:5000/api
 
-const API_BASE_URL = 'http://localhost:5000/api';
+
+const API_BASE_URL = '/api';
 
 // Helper function for API requests
 // Automatically handles JWT tokens and request formatting

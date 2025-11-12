@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault(); // Prevents page reload on submit
     try { 
       // Call the login API endpoint
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
