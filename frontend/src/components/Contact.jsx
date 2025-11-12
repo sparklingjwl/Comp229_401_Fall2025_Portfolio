@@ -1,6 +1,7 @@
 // Import GitHub and LinkedIn icons from react-icons
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
+
 // Import useNavigate for navigation to other pages
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -17,6 +18,7 @@ export default function Contact() {
         email: '',
         message: ''
     });
+
     // State variables for loading status and feedback message
     const [loading, setLoading] = useState(false);    
     const [message, setMessage] = useState('');
@@ -54,9 +56,9 @@ export default function Contact() {
             });
         
             setTimeout(() => {
-                console.log('Navigatin home');
+                console.log('Navigating home');
                 navigate("/")
-             }, 2000);
+             }, 5000);
         } catch (error) {
             console.error('Contact form error:', error);
             setMessage('Error sending message. Please try again later.');
